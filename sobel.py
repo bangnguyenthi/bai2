@@ -22,14 +22,14 @@ def Tich_chap(img,mask):
     return img_new
 
 # Định nghĩa Sobel theo hướng X
-locSobelX = np.array(([-1,-2,-1],
-                      [ 0, 0, 0],
-                      [ 1, 2, 1]), dtype="float")
+locSobelX = np.array(([-1,0,1],
+                      [ -2, 0, 2],
+                      [ -1, 0, 1]), dtype="float")
 
 # Định nghĩa bộ lọc Sobel theo hướng Y
-locSobelY = np.array(([-1, 0, 1],
-                      [-2, 0, 2],
-                      [ 1, 0, 1]), dtype="float")
+locSobelY = np.array(([-1, -2, -1],
+                      [0, 0, 0],
+                      [ 1, 2, 1]), dtype="float")
 
 fig = plt.figure(figsize=(16, 9)) # Tạo vùng vẽ tỷ lệ 16:9
 (ax1, ax2, ax3), (ax4, ax5, ax6) = fig.subplots(2, 3) # Tạo 6 vùng vẽ con
